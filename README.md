@@ -31,8 +31,8 @@ https://github.com/gabdevpy/naguarabit_api
 2. descargar y restaurar backup de base datos proporcionado via email:
 carpeta bdbackup/production_naguarab_backend__2022-11-18_13-32-50
 
-Otra opción es usar el archivo del repositorio:
-database/backup/for_api_production_naguarab_backend_2022-11-18_13-32-50
+Otra opción es usar el respaldo dump del repositorio, ubicado en database/backup/:
+https://github.com/gabdevpy/naguarabit-api-demo/blob/main/database/backup/production_naguarab_backend__2022-11-18_13-32-50.sql
 
 3. modificar el archivo .env si hace falta ajustar parametros conexion bd acorde al servidor/entorno.
 Ejemplo: C:\wamp64\www\naguarabit-backend\env
@@ -52,11 +52,16 @@ composer dump-autoload
 php artisan serve
 
 
-PROBAR EL API
-El archivo route_list_api.txt contiene el listado de endpoints.
-Las que expongo listas para pruebas son:
-Bank: 5 endpoints
-...TODO. agregar tomar de insomina
+*API TESTING:
+El archivo route_list_api.txt es el listado de todos los endpoints, algunos no están implementados al 100% aun.
 
-Country: 1 endpoint
-...TODO. agregar tomar de insomina
+Las rutas que expongo para este demo son:
+Country
+Banks
+
+Ejemplos:
+GET http://localhost:8000/api/countries/
+GET http://localhost:8000/api/banks
+GET http://localhost:8000/api/banks/PAR/byCountry
+GET http://localhost:8000/api/banks/VEN/byCountry
+GET http://localhost:8000/api/banks/show/1

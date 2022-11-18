@@ -23,6 +23,7 @@ Composer
 Mysql
 
 
+
 *Pasos para montar el aplicativo:
 
 1. clonar repositorio:
@@ -43,7 +44,7 @@ DB_DATABASE=new_naguarabit
 DB_USERNAME=root
 DB_PASSWORD=
 
-4. ejecutar:
+4. ejecutar comandos:
 composer install
 php artisan optimize:clear
 composer dump-autoload
@@ -51,6 +52,7 @@ php artisan migrate
 php artisan db:seed
 php artisan jwt:secret
 php artisan serve
+
 
 
 *API TESTING:

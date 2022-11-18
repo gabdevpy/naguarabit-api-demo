@@ -46,9 +46,10 @@ DB_PASSWORD=
 4. ejecutar:
 composer install
 php artisan optimize:clear
-php artisan migrate
-php artisan jwt:secret
 composer dump-autoload
+php artisan migrate
+php artisan db:seed
+php artisan jwt:secret
 php artisan serve
 
 

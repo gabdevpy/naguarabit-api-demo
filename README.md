@@ -54,15 +54,15 @@ php artisan serve
 
 
 *API TESTING:
-El archivo route_list_api.txt es el listado de todos los endpoints, algunos no están implementados al 100% aun.
-
+El archivo route_list_api.txt contiene el listado de todos los endpoints, algunos no están implementados al 100%.
 Las rutas que expongo para este demo son:
-Country
-Banks
+country
+banks
 
-Ejemplos:
-GET http://localhost:8000/api/countries/
-GET http://localhost:8000/api/banks
-GET http://localhost:8000/api/banks/PAR/byCountry
-GET http://localhost:8000/api/banks/VEN/byCountry
-GET http://localhost:8000/api/banks/show/1
+Ejemplos operaciones GET:
+http://localhost:8000/api/countries/
+http://localhost:8000/api/banks
+http://localhost:8000/api/banks/PAR/byCountry
+http://localhost:8000/api/banks/VEN/byCountry
+http://localhost:8000/api/banks/show/1
+http://localhost:8000/api/banks/VEN/byActive

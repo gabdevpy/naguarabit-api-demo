@@ -49,7 +49,9 @@ Route::namespace('App\Http\Controllers')->group(static function() {
 	Route::prefix('banks')->group(function () {
     	Route::get('/', 'BankController@index');
     	Route::get('/{country}/byCountry', 'BankController@byCountry');
-   	});
+		Route::get('/{country}/byActive', 'BankController@byActive');
+		Route::get('/show/{id}', 'BankController@show');	
+	});
 
 	Route::prefix('countries')->group(function () {
     	Route::get('/', 'CountryController@index');

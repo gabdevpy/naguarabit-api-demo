@@ -37,12 +37,31 @@ class BankController extends Controller
     }
 
     public function byCountry(Request $request,$country)
-    {
+    {//TODO. clonar function para hacer endpoint get de lotes
         $resource = ApiHelper::resource();
 
         try{
 
             $banks = Bank::where('codpais',$country)->orderBy('nombre')->get();
+
+            return response()->json(['records' => $banks]);
+          ApiHelper::success($resource);
+        }catch(\Exception $e){
+          ApiHelper::setException($resource, $e);
+        }
+
+        return $this->sendResponse($resource);
+    }
+
+    //lista bancos activos
+    public function byActive(Request $request,$country)
+    {
+        $resource = ApiHelper::resource();
+
+        try{
+            $banks = Bank::where('codpais',$country)
+            ->where('activo', 1)
+            ->orderBy('nombre')->get();
 
             return response()->json(['records' => $banks]);
           ApiHelper::success($resource);
